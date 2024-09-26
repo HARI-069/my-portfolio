@@ -8,3 +8,15 @@ body {
   display: block;
   margin: 20px;
 }
+.cursor {
+  display: inline-block;
+  background-color: #00ff00;
+  width: 10px;
+  height: 18px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    background: transparent;
+  }
+}
