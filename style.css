@@ -9,6 +9,7 @@ body {
   align-items: center;
   /* font-size: 18px; */
 }
+
 #terminal {
   width: 80%;
   max-width: 800px;
@@ -20,6 +21,21 @@ body {
   white-space: pre-wrap;
 }
 
+#ascii-art {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+#cmd-input {
+  background-color: #fff;
+  color: #00ff00;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: "Courier New", "Courier New", Courier, monospace;
+  font-size: 16px;
+  margin-top: 10px;
+}
 /*
 .cmd-line {
   display: block;
