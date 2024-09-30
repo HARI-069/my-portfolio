@@ -25,6 +25,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* smOoth scroll */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--body-color);
 }
