@@ -105,6 +105,60 @@ nav {
 .nav_menu_list {
   display: flex;
 }
+.nav-menu,
+.nav_list {
+  list-style: none;
+  position: relative;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color-second);
+  font-weight: 500;
+  padding-inline: 15px;
+  margin-inline: 20px;
+}
+.nav-menu-btn {
+  display: none;
+}
+.nav-menu-btn i {
+  font-size: 28px;
+  cursor: pointer;
+}
+.active-link {
+  position: relative;
+  color: var(--first-color);
+  transition: 0.3;
+}
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background: var(--first-color);
+  border-radius: 50%;
+}
+.wrapper {
+  padding-inline: 10vw;
+}
+.featured-box {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  min-height: 700px;
+}
+.featured-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 20px;
+}
 
 /* body { */
 /* background-color: #2c2b2b; */
