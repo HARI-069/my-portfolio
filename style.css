@@ -499,6 +499,18 @@ footer {
   display: flex;
   margin-top: 10px;
 }
+/*  */
+@media only screen and (max-width: 1024px) {
+  .featured-text {
+    padding: 0;
+  }
+  .image,
+  .image img {
+    width: 320px;
+    height: 320px;
+  }
+}
+/*  */
 
 /* body { */
 /* background-color: #2c2b2b; */
