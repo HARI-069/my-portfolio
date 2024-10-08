@@ -5,14 +5,6 @@ const navHeader = document.getElementById("header");
 const scrollBody = document.body.scrollTop;
 const scrollDocEle = document.documentElement.scrollTop;
 
-const myMenuFunction = function () {
-  if (menuBtn.className === "nav-menu") {
-    menuBtn.className += " responsive";
-  } else {
-    menuBtn.className = "nav-menu";
-  }
-};
-
 const typingEffect = new Typed(".typedText", {
   strings: ["Developer", "Designer"],
   loop: true,
@@ -20,6 +12,14 @@ const typingEffect = new Typed(".typedText", {
   backSpeed: 80,
   backDelay: 2000,
 });
+
+const myMenuFunction = function () {
+  if (menuBtn.className === "nav-menu") {
+    menuBtn.className += " responsive";
+  } else {
+    menuBtn.className = "nav-menu";
+  }
+};
 
 const headerShadow = function () {
   if (scrollBody > 50 || scrollDocEle > 50) {
@@ -31,4 +31,8 @@ const headerShadow = function () {
     navHeader.style.height = "90px";
     navHeader.lineHeight = "90px";
   }
+};
+
+window.onscroll = function () {
+  headerShadow();
 };
