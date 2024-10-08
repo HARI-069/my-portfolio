@@ -4,6 +4,7 @@ const menuBtn = document.getElementById("myNavMenu");
 const navHeader = document.getElementById("header");
 const scrollBody = document.body.scrollTop;
 const scrollDocEle = document.documentElement.scrollTop;
+// const sections = document.querySelectorAll("section[id]")
 
 const typingEffect = new Typed(".typedText", {
   strings: ["Developer", "Designer"],
@@ -36,3 +37,21 @@ const headerShadow = function () {
 window.onscroll = function () {
   headerShadow();
 };
+
+const scrollRev = ScrollReveal({
+  origin: "top",
+  distance: "80px",
+  duration: 2000,
+  reset: true,
+});
+
+scrollRev.reveal(".featured-text-card", {});
+scrollRev.reveal(".featured-name", { delay: 100 });
+scrollRev.reveal(".featured-text-info", { delay: 200 });
+scrollRev.reveal(".featured-text-btn", { delay: 200 });
+scrollRev.reveal(".socila_icons", { delay: 200 });
+scrollRev.reveal(".featured-image", { delay: 300 });
+
+scrollRev.reveal(".project-box", { interval: 200 });
+
+scrollRev.reveal(".top-header", {});
