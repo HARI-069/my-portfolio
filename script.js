@@ -38,20 +38,31 @@ window.onscroll = function () {
   headerShadow();
 };
 
+// Scroll AnimaTion
 const scrollRev = ScrollReveal({
   origin: "top",
   distance: "80px",
   duration: 2000,
   reset: true,
 });
+scrollRev.reveal(".top-header", {}); // Headings
 
-scrollRev.reveal(".featured-text-card", {});
+scrollRev.reveal(".featured-text-card", {}); // Home
 scrollRev.reveal(".featured-name", { delay: 100 });
 scrollRev.reveal(".featured-text-info", { delay: 200 });
 scrollRev.reveal(".featured-text-btn", { delay: 200 });
 scrollRev.reveal(".socila_icons", { delay: 200 });
 scrollRev.reveal(".featured-image", { delay: 300 });
 
-scrollRev.reveal(".project-box", { interval: 200 });
+scrollRev.reveal(".project-box", { interval: 200 }); // project Box
 
-scrollRev.reveal(".top-header", {});
+// ScRoll Left animation
+const scrollRevLeft = ScrollReveal({
+  origin: "left",
+  distance: "80px",
+  duartion: 2000,
+  reset: true,
+});
+
+scrollRevLeft.reveal(".about-info", { delay: 100 });
+scrollRevLeft.reveal(".contact-info", { delay: 100 });
