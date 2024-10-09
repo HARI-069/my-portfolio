@@ -4,7 +4,7 @@ const menuBtn = document.getElementById("myNavMenu");
 const navHeader = document.getElementById("header");
 const scrollBody = document.body.scrollTop;
 const scrollDocEle = document.documentElement.scrollTop;
-// const sections = document.querySelectorAll("section[id]")
+const sections = document.querySelectorAll("section[id]");
 
 const typingEffect = new Typed(".typedText", {
   strings: ["Developer", "Designer"],
@@ -66,3 +66,13 @@ const scrollRevLeft = ScrollReveal({
 
 scrollRevLeft.reveal(".about-info", { delay: 100 });
 scrollRevLeft.reveal(".contact-info", { delay: 100 });
+
+const scrollActive = function () {
+  const scrollY = window.scrollY;
+
+  sections.forEach((current) => {
+    const sectionHt = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
+  });
+};
