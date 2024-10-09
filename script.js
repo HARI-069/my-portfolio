@@ -74,5 +74,9 @@ const scrollActive = function () {
     const sectionHt = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     const sectionId = current.getAttribute("id");
+
+    // if(scrollY > sectionTop && scrollY <= sectionTop + sectionHt) {
+
+    // }
   });
 };
