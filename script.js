@@ -75,8 +75,16 @@ const scrollActive = function () {
     const sectionTop = current.offsetTop - 50;
     const sectionId = current.getAttribute("id");
 
-    // if(scrollY > sectionTop && scrollY <= sectionTop + sectionHt) {
-
-    // }
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHt) {
+      doucument
+        .querySelector(".nav-menu a[href *=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      doucument
+        .querySelector(".nav-menu a[href *=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
   });
 };
+
+// window.addEventListener("scroll", scrollActive);
