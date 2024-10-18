@@ -39,22 +39,30 @@ window.onscroll = function () {
 };
 
 // Scroll AnimaTion
-const scrollRev = ScrollReveal({
+
+const sr = srcrollReveal({
   origin: "top",
   distance: "80px",
   duration: 2000,
   reset: true,
 });
-scrollRev.reveal(".top-header", {}); // Headings
 
-scrollRev.reveal(".featured-text-card", {}); // Home
-scrollRev.reveal(".featured-name", { delay: 100 });
-scrollRev.reveal(".featured-text-info", { delay: 200 });
-scrollRev.reveal(".featured-text-btn", { delay: 200 });
-scrollRev.reveal(".socila_icons", { delay: 200 });
-scrollRev.reveal(".featured-image", { delay: 300 });
+// const scrollRev = ScrollReveal({
+//   origin: "top",
+//   distance: "80px",
+//   duration: 2000,
+//   reset: true,
+// });
+sr.reveal(".top-header", {}); // Headings
 
-scrollRev.reveal(".project-box", { interval: 200 }); // project Box
+sr.reveal(".featured-text-card", {}); // Home
+sr.reveal(".featured-name", { delay: 100 });
+sr.reveal(".featured-text-info", { delay: 200 });
+sr.reveal(".featured-text-btn", { delay: 200 });
+sr.reveal(".socila_icons", { delay: 200 });
+sr.reveal(".featured-image", { delay: 300 });
+
+sr.reveal(".project-box", { interval: 200 }); // project Box
 
 // ScRoll Left animation
 const scrollRevLeft = ScrollReveal({
@@ -87,4 +95,4 @@ const scrollActive = function () {
   });
 };
 
-// window.addEventListener("scroll", scrollActive);
+window.addEventListener("scroll", scrollActive);
