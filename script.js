@@ -4,6 +4,7 @@ const menuBtn = document.getElementById("myNavMenu");
 const navHeader = document.getElementById("header");
 const sections = document.querySelectorAll("section[id]");
 const downloadCV = document.getElementById("download-cv");
+const downloadCVHome = document.getElementById("download-cv-home");
 
 const typingEffect = new Typed(".typedText", {
   strings: ["Developer", "Designer"],
@@ -104,7 +105,7 @@ const scrollActive = function () {
 
 window.addEventListener("scroll", scrollActive);
 
-downloadCV.addEventListener("click", function () {
+const downlaod = function () {
   const cvPath = "HariharanResume.pdf";
   const link = document.createElement("a");
   link.href = cvPath;
@@ -112,4 +113,7 @@ downloadCV.addEventListener("click", function () {
   document.body.append(link);
   link.click();
   document.body.removeChild(link);
-});
+};
+
+downloadCV.addEventListener("click", downlaod);
+downloadCVHome.addEventListener("click", downlaod);
