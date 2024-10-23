@@ -5,6 +5,7 @@ const navHeader = document.getElementById("header");
 const sections = document.querySelectorAll("section[id]");
 const downloadCV = document.getElementById("download-cv");
 const downloadCVHome = document.getElementById("download-cv-home");
+const downloadCVAbout = document.getElementById("download-cv-about");
 
 const typingEffect = new Typed(".typedText", {
   strings: ["Developer", "Designer"],
@@ -117,3 +118,4 @@ const downlaod = function () {
 
 downloadCV.addEventListener("click", downlaod);
 downloadCVHome.addEventListener("click", downlaod);
+downloadCVAbout.addEventListener("click", downlaod);
