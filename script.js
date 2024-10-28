@@ -119,3 +119,20 @@ const downlaod = function () {
 downloadCV.addEventListener("click", downlaod);
 downloadCVHome.addEventListener("click", downlaod);
 downloadCVAbout.addEventListener("click", downlaod);
+
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("hariharanvj7777@gmail.com");
+
+  const form = document.getElementById("contact-form");
+  const responseMessage = document.getElementById("response-message");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const templateParams = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+  });
+});
