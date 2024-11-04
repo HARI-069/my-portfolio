@@ -107,7 +107,7 @@ const scrollActive = function () {
 window.addEventListener("scroll", scrollActive);
 
 const downlaod = function () {
-  const cvPath = "HariharanResume.pdf";
+  const cvPath = "HARIHARAN_M_RESUME.pdf";
   const link = document.createElement("a");
   link.href = cvPath;
   link.download = "";
@@ -134,5 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
       email: form.email.value,
       message: form.message.value,
     };
+  });
+
+  emailjs.send("service_j31nif9", "", templateParams).then((response) => {
+    responseMessage.textContent;
   });
 });
