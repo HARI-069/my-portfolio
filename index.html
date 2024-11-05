@@ -16,6 +16,18 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "8aFGqCQHkNrq19Vow",
+        });
+      })();
+    </script>
+
+    <script
       defer
       src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"
     ></script>
@@ -205,19 +217,26 @@
                 <div class="form-inputs">
                   <input
                     type="text"
+                    id="name"
                     class="input-field"
                     placeholder="Name"
                     required
                   />
                   <input
                     type="text"
+                    id="email"
                     class="input-field"
                     placeholder="Email"
                     required
                   />
                 </div>
                 <div class="text-area">
-                  <textarea placeholder="Message" required></textarea>
+                  <textarea
+                    id="message"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                  <!-- Added id -->
                 </div>
                 <div class="form-button">
                   <button class="btn" onclick="sendEmail()">
@@ -227,6 +246,8 @@
               </div>
             </div>
           </div>
+          <p id="response-message"></p>
+          <!-- Added para to show res message -->
         </section>
       </main>
 
