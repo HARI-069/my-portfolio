@@ -120,23 +120,35 @@ downloadCV.addEventListener("click", downlaod);
 downloadCVHome.addEventListener("click", downlaod);
 downloadCVAbout.addEventListener("click", downlaod);
 
-document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("hariharanvj7777@gmail.com");
+// document.addEventListener("DOMContentLoaded", function () {
+// emailjs.init("8aFGqCQHkNrq19Vow");
 
-  const form = document.getElementById("contact-form");
+const sendEmail = function () {
+  // const name = document.getElementById("name").value;
+  // const email = document.getElementById("email").value;
+  // const message = document.getElementById("message").value;
   const responseMessage = document.getElementById("response-message");
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  const templateParams = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
 
-    const templateParams = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-  });
+  emailjs
+    .send("service_j31nif9", "template_7zsra52", templateParams)
+    .then((response) => {
+      responseMessage.textContent = "Email sent successfully!";
+      // alert(response.status);
 
-  emailjs.send("service_j31nif9", "", templateParams).then((response) => {
-    responseMessage.textContent;
-  });
-});
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    })
+    .catch((error) => {
+      responseMessage.textContent =
+        "Failed to send email. Please try again later.";
+      console.error("EmailJS error:", error);
+    });
+};
+// });
