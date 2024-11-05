@@ -130,8 +130,8 @@ const sendEmail = function () {
   const responseMessage = document.getElementById("response-message");
 
   const templateParams = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
+    from_name: document.getElementById("name").value,
+    email_id: document.getElementById("email").value,
     message: document.getElementById("message").value,
   };
 
@@ -139,6 +139,7 @@ const sendEmail = function () {
     .send("service_j31nif9", "template_7zsra52", templateParams)
     .then((response) => {
       responseMessage.textContent = "Email sent successfully!";
+      responseMessage.style.color = "green";
       // alert(response.status);
 
       document.getElementById("name").value = "";
@@ -148,6 +149,7 @@ const sendEmail = function () {
     .catch((error) => {
       responseMessage.textContent =
         "Failed to send email. Please try again later.";
+      responseMessage.style.color = "red";
       console.error("EmailJS error:", error);
     });
 };
