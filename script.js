@@ -135,6 +135,16 @@ const sendEmail = function () {
     message: document.getElementById("message").value,
   };
 
+  if (
+    !templateParams.from_name ||
+    !templateParams.from_name ||
+    !templateParams.message
+  ) {
+    responseMessage.textContent = "Please fill in all fields before sending.";
+    responseMessage.style.color = "red";
+    return;
+  }
+
   emailjs
     .send("service_j31nif9", "template_7zsra52", templateParams)
     .then((response) => {
